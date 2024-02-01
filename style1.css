@@ -1,0 +1,149 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .preloader {
+    animation: rotate 2.1s cubic-bezier(0.75, 0, 0.5, 1);
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.preloader span {
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background:  rgb(255, 0, 136);
+    border: 1px solid  rgb(255, 0, 136);
+    border-radius: 100%;
+}
+
+.preloader span:nth-child(1) {
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.1s cubic-bezier(0.75, 0, 0.5, 1) ;
+}
+
+@keyframes shape_1 {
+    60% {
+        transform: scale(0.4);
+    }
+}
+
+.preloader span:nth-child(2) {
+    transform: translate(28px, -28px);
+    animation: shape_2 2.1s cubic-bezier(0.75, 0, 0.5, 1);
+}
+
+@keyframes shape_2 {
+    40% {
+        transform: scale(0.4);
+    }
+}
+
+.preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.1s cubic-bezier(0.75, 0, 0.5, 1);
+}
+
+@keyframes shape_3 {
+    50%{
+        border-radius: 100%;
+        transform: scale(0.5) rotate(-45deg);
+    }
+}
+
+.shadow {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color:   rgba(224, 73, 98, 0.196);
+    border: 1px solid rgba(224, 73, 98, 0.196);
+    animation: shadow 2.1s cubic-bezier(0.75, 0, 0.5, 1);
+}
+
+@keyframes shadow {
+    50% {
+        transform: translateX(-50%) scale(0.5);
+        border-color: rgba(224, 73, 98, 0.196);
+    }
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 58%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+/* Position the "No" button absolutely within body */
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+    /* Smooth movement */
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
+    /* Smooth movement */
+}
+
+.header_text {
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: 200;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    margin-left: 20px;
+    /* optional: adds some space between the buttons */
+}
+
+.btn {
+    background-color: #FFB6C1;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FAF9F6;
+}
+
